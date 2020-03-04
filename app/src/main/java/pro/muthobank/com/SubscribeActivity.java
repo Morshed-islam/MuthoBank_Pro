@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -12,10 +13,17 @@ import android.widget.TextView;
 import com.ybs.countrypicker.CountryPicker;
 import com.ybs.countrypicker.CountryPickerListener;
 
+import org.w3c.dom.Text;
+
+import pro.muthobank.com.app.Fonts;
+
 public class SubscribeActivity extends AppCompatActivity {
 
+    private EditText phonetxt;
     private LinearLayout select_country;
-    private TextView countrytxt, countrycodetxt;
+    private TextView countrycodetxt;
+    private TextView _tvCountry,_tvFName,_tvLName,_tvEmail,_tvEmployment,_tvCurrentSalary,_tvAge;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +31,25 @@ public class SubscribeActivity extends AppCompatActivity {
 
         select_country = findViewById(R.id.select_country);
         countrycodetxt = findViewById(R.id.countrycodetxt);
-//        countrytxt = findViewById(R.id.countrytxt);
+        phonetxt = findViewById(R.id.phonetxt);
+
+        _tvCountry = findViewById(R.id.tv_country);
+        _tvFName = findViewById(R.id.tv_f_name);
+        _tvLName = findViewById(R.id.tv_l_name);
+        _tvEmail = findViewById(R.id.tv_email);
+        _tvEmployment = findViewById(R.id.tv_employment);
+        _tvCurrentSalary = findViewById(R.id.tv_current_salary);
+        _tvAge = findViewById(R.id.tv_age);
+
+
+        Fonts.customFontLight(phonetxt,getApplicationContext());
+        Fonts.customFontLight(_tvCountry,getApplicationContext());
+        Fonts.customFontBold(_tvFName,getApplicationContext());
+        Fonts.customFontBold(_tvLName,getApplicationContext());
+        Fonts.customFontBold(_tvEmail,getApplicationContext());
+        Fonts.customFontBold(_tvEmployment,getApplicationContext());
+        Fonts.customFontBold(_tvCurrentSalary,getApplicationContext());
+        Fonts.customFontBold(_tvAge,getApplicationContext());
 
         select_country.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,13 +68,11 @@ public class SubscribeActivity extends AppCompatActivity {
             @Override
             public void onSelectCountry(String name, String code, String dialCode, int flagDrawableResID) {
                 // Implement your code here
-//                countrytxt.setText(name);
                 countrycodetxt.setText(dialCode);
                 picker.dismiss();
                 country_iso_code = code;
             }
         });
-//        picker.setStyle(R.style.countrypicker_style, R.style.countrypicker_style);
         picker.show(getSupportFragmentManager(), "Select Country");
     }
 }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context=".SubscribeActivity">
 
@@ -14,6 +15,16 @@
         android:layout_marginRight="2dp"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/tv_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Country"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            />
+
         <LinearLayout
             android:id="@+id/select_country"
             android:layout_width="match_parent"
@@ -21,7 +32,6 @@
             android:orientation="horizontal"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginRight="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
             >
 
             <LinearLayout
@@ -112,8 +122,6 @@
 
         </LinearLayout>
 
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -122,10 +130,11 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_f_name"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:padding="@dimen/_8sdp"
+                android:padding="@dimen/_6sdp"
                 android:text="First Name : "
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
@@ -147,10 +156,11 @@
 
 
             <TextView
+                android:id="@+id/tv_l_name"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:padding="@dimen/_8sdp"
+                android:padding="@dimen/_6sdp"
                 android:text="Last Name : "
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
@@ -172,10 +182,11 @@
 
 
             <TextView
+                android:id="@+id/tv_email"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:padding="@dimen/_8sdp"
+                android:padding="@dimen/_6sdp"
                 android:text="Email : "
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
@@ -198,10 +209,11 @@
 
 
             <TextView
+                android:id="@+id/tv_employment"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:padding="@dimen/_8sdp"
+                android:padding="@dimen/_6sdp"
                 android:text="Employment Status : "
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
@@ -212,7 +224,6 @@
                 android:inputType="text"
                 android:hint="Salaried/Gig?"
                 android:background="@android:color/transparent" />
-
 
         </LinearLayout>
 
@@ -225,10 +236,11 @@
 
 
             <TextView
+                android:id="@+id/tv_current_salary"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:padding="@dimen/_8sdp"
+                android:padding="@dimen/_6sdp"
                 android:text="Current Salary : "
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
@@ -250,10 +262,11 @@
 
 
             <TextView
+                android:id="@+id/tv_age"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:padding="@dimen/_8sdp"
+                android:padding="@dimen/_6sdp"
                 android:text="Age : "
                 android:textColor="@color/black"
                 android:textSize="@dimen/_14sdp" />
