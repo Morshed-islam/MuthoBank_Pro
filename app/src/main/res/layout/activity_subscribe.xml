@@ -20,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Country"
+            android:textColor="#504F4F"
             android:textSize="@dimen/_13sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginLeft="@dimen/_20sdp"
@@ -101,10 +102,10 @@
                     android:layout_toRightOf="@+id/countrycodetxt"
                     android:background="@android:color/transparent"
                     android:hint="Enter Your Mobile Number"
-                    android:inputType="phone"
+                    android:inputType="number"
                     android:padding="@dimen/_10sdp"
                     android:textColor="@color/black"
-                    android:textColorHint="@color/black"
+                    android:textColorHint="#504F4F"
                     android:textSize="15dp" />
 
                 <View
@@ -144,7 +145,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="text"
-                android:text="morshed"
                 android:background="@android:color/transparent" />
 
 
@@ -172,7 +172,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="text"
-                android:text="morshed"
                 android:background="@android:color/transparent" />
 
 
@@ -199,7 +198,7 @@
                 android:id="@+id/ed_email"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="morshedgmailcom"
+                android:inputType="textEmailAddress"
                 android:background="@android:color/transparent" />
 
 
@@ -227,7 +226,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="text"
-                android:text="dev"
                 android:hint="Salaried/Gig?"
                 android:background="@android:color/transparent" />
 
@@ -256,7 +254,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:text="12000"
                 android:background="@android:color/transparent" />
 
 
@@ -283,7 +280,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
-                android:text="25"
                 android:background="@android:color/transparent" />
 
         </LinearLayout>

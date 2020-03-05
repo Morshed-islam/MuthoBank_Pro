@@ -6,7 +6,10 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -21,8 +24,6 @@ import android.widget.Toast;
 
 import com.ybs.countrypicker.CountryPicker;
 import com.ybs.countrypicker.CountryPickerListener;
-
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 
@@ -44,6 +45,9 @@ public class SubscribeActivity extends AppCompatActivity {
     private TextView countrycodetxt;
     private TextView _tvCountry,_tvFName,_tvLName,_tvEmail,_tvEmployment,_tvCurrentSalary,_tvAge;
     private ProgressDialog mRegProgress;
+
+
+
 
 
     @Override
@@ -74,6 +78,11 @@ public class SubscribeActivity extends AppCompatActivity {
         join_now_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (!isNetworkAvailable()){
+                    Toast.makeText(SubscribeActivity.this, "Please Check Your Internet!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 postDataToServer();
 
@@ -221,4 +230,12 @@ public class SubscribeActivity extends AppCompatActivity {
 
         }
     }
+
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
 }
