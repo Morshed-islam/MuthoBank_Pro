@@ -53,7 +53,6 @@
             android:textSize="@dimen/_15sdp"
             android:text="Join Now!"/>
 
-
     </LinearLayout>
 
 </LinearLayout>

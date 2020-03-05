@@ -140,9 +140,11 @@
                 android:textSize="@dimen/_14sdp" />
 
             <EditText
+                android:id="@+id/first_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="text"
+                android:text="morshed"
                 android:background="@android:color/transparent" />
 
 
@@ -166,9 +168,11 @@
                 android:textSize="@dimen/_14sdp" />
 
             <EditText
+                android:id="@+id/ed_last_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="text"
+                android:text="morshed"
                 android:background="@android:color/transparent" />
 
 
@@ -192,9 +196,10 @@
                 android:textSize="@dimen/_14sdp" />
 
             <EditText
+                android:id="@+id/ed_email"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="textEmailAddress"
+                android:text="morshedgmailcom"
                 android:background="@android:color/transparent" />
 
 
@@ -207,7 +212,6 @@
             android:background="@drawable/edidtext_shape"
             android:orientation="horizontal">
 
-
             <TextView
                 android:id="@+id/tv_employment"
                 android:layout_width="wrap_content"
@@ -219,9 +223,11 @@
                 android:textSize="@dimen/_14sdp" />
 
             <EditText
+                android:id="@+id/ed_status"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="text"
+                android:text="dev"
                 android:hint="Salaried/Gig?"
                 android:background="@android:color/transparent" />
 
@@ -246,9 +252,11 @@
                 android:textSize="@dimen/_14sdp" />
 
             <EditText
+                android:id="@+id/ed_salary"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
+                android:text="12000"
                 android:background="@android:color/transparent" />
 
 
@@ -259,7 +267,6 @@
             android:layout_height="60dp"
             android:background="@drawable/edidtext_shape"
             android:orientation="horizontal">
-
 
             <TextView
                 android:id="@+id/tv_age"
@@ -272,11 +279,12 @@
                 android:textSize="@dimen/_14sdp" />
 
             <EditText
+                android:id="@+id/ed_age"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
+                android:text="25"
                 android:background="@android:color/transparent" />
-
 
         </LinearLayout>
 
